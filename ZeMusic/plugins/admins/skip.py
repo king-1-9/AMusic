@@ -13,9 +13,7 @@ from ZeMusic.utils.thumbnails import get_thumb
 from config import BANNED_USERS
 
 
-@app.on_message(
-    filters.command(["skip","تخطي", "cskip", "next", "cnext", "التالي"], "")  & ~BANNED_USERS
-)
+@app.on_message(filters.command(["skip","تخطي", "cskip", "next", "cnext", "التالي"], "")  & ~BANNED_USERS)
 @AdminRightsCheck
 async def skip(cli, message: Message, _, chat_id):
     if not len(message.command) < 2:
