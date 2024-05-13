@@ -10,17 +10,17 @@ from ZeMusic.core.call import Mody
 
 @app.on_message(filters.video_chat_started)
 async def brah(_, msg):
-       await msg.reply("<b>‹ تم بدء المكالمه ›</b>")
+       await msg.reply("<b>• فتحوا المكالمه اللي وده يسمعنا صوته يصعد 🦦</b>")
 
 
 @app.on_message(filters.video_chat_ended)
 async def brah2(_, msg):
-       await msg.reply("<b>‹ تم انهاء المكالمه ›</b>")
+       await msg.reply("<b>• قفلناء المكالمه اصواتكم تفتح النفس🦦</b>")
 
 
 @app.on_message(filters.video_chat_members_invited)
 async def brah3(app :app, message:Message):
-           text = f"↞ قام {message.from_user.mention} \n↞ بدعوة :"
+           text = f"↞ الحلو : {message.from_user.mention} \n↞ يبيك للمكالمه :"
            x = 0
            for user in message.video_chat_members_invited.users:
              try:
