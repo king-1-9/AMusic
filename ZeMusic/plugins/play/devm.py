@@ -11,7 +11,7 @@ import config
 
 lnk = "https://t.me/" + config.CHANNEL_LINK
 
-@app.on_message(command(["مطور", "المطور"]))
+@app.on_message(filters.command(["مطور", "المطور"],""))
 async def devid(client: Client, message: Message):
     usr = await client.get_users(OWNER_ID)
     name = usr.first_name
