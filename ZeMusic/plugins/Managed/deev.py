@@ -1,5 +1,4 @@
 import asyncio
-
 import os
 import time
 import requests
@@ -11,21 +10,22 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 from strings.filters import command
 from ZeMusic import (Apple, Resso, SoundCloud, Spotify, Telegram, YouTube, app)
 from ZeMusic import app
-from random import  choice, randint
-                
+from random import choice, randint
+
 @app.on_message(filters.regex(r"^(.)$"))
 async def huhh(client: Client, message: Message):
     dev = await client.get_users(OWNER_ID)
     name = dev.first_name
-    
-    await message.reply_to_message(
-        caption=f"""<b>Dev ↠ <a href='tg://user?id={OWNER_ID}'>{name}</a></b>""",
+
+    await message.reply(
+        text=f"""<b>Dev ↠ <a href='tg://user?id={OWNER_ID}'>{name}</a></b>""",
         reply_markup=InlineKeyboardMarkup(
             [
                 [
                    InlineKeyboardButton(
-                        "𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶", url=f"https://t.me/EF_19"),
+                        "𝚂𝙾𝚄𝚁𝙲𝙴 𝙺𝙸𝙽𝙶", url="https://t.me/EF_19"),
                 ],
             ]
         ),
+        reply_to_message_id=message.message_id  # This ensures the bot replies to the user's message
     )
