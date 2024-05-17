@@ -18,7 +18,7 @@ async def huhh(client: Client, message: Message):
     dev = await client.get_users(OWNER_ID)
     name = dev.first_name
     
-    await message.reply_text(
+    await message.reply_message(
         caption=f"""<b>Dev ↠ <a href='tg://user?id={OWNER_ID}'>{name}</a></b>""",
         reply_markup=InlineKeyboardMarkup(
             [
