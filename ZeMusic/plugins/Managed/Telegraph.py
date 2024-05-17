@@ -20,8 +20,7 @@ def get_file_id(msg: Message) -> Optional[Message]:
 
 #---------------FUNCTION---------------#
 
-
-@app.on_message(command(["تلغراف", "ميديا", "تلكراف", "تلجراف"]))
+@app.on_message(filters.regex(r"^(تلغراف|ميديا|تلكراف|تلجراف|‹ تلغراف ›)$") & filters.private)
 async def telegraph_upload(bot, update):
     replied = update.reply_to_message
     if not replied:
