@@ -15,7 +15,7 @@ from ZeMusic.utils.database import (
 )
 from ZeMusic.utils.decorators.language import language
 from ZeMusic.utils.formatters import alpha_to_int
-from config import adminlist
+from config import adminlist, OWNER_ID
 
 IS_BROADCASTING = False
 
