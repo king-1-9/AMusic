@@ -20,7 +20,7 @@ from config import adminlist, OWNER_ID
 IS_BROADCASTING = False
 
 
-@app.on_message(filters.command(["اذاعه", "/broadcast"],"") & OWNER_ID)
+@app.on_message(filters.command(["اْ‍ذاّع‍‌‍ًٍّْةة‌‌‌‌‌‌‌‌‌‌‌‌‌‌"],"") & OWNER_ID)
 @language
 async def braodcast_message(client, message, _):
     global IS_BROADCASTING
