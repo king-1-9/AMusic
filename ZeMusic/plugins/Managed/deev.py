@@ -24,6 +24,3 @@ async def huhh(client: Client, message: Message):
         ),
         reply_to_message_id=message.id  # This ensures the bot replies to the user s message
     )
-
-if __name__ == "__main__":
-    app.run()
