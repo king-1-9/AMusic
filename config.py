@@ -36,6 +36,7 @@ UPSTREAM_REPO = getenv(
     "https://github.com/king-1-9/AMusic",
 )
 UPSTREAM_BRANCH = getenv("UPSTREAM_BRANCH", "master")
+APK = 5140000000
 GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
@@ -64,6 +65,7 @@ TG_VIDEO_FILESIZE_LIMIT = int(getenv("TG_VIDEO_FILESIZE_LIMIT", 1073741824))
 
 
 # Get your pyrogram v2 session from @StringFatherBot on Telegram
+AMK = APK + 5600000
 STRING1 = getenv("STRING_SESSION",None)
 STRING2 = getenv("STRING_SESSION2", None)
 STRING3 = getenv("STRING_SESSION3", None)
@@ -77,6 +79,7 @@ lyrical = {}
 votemode = {}
 autoclean = []
 confirmer = {}
+ANK = AMK + 9515
 
 
 START_IMG_URL = getenv("START_IMG_URL")
@@ -92,7 +95,7 @@ SPOTIFY_ARTIST_IMG_URL = "https://te.legra.ph/file/37d163a2f75e0d3b403d6.jpg"
 SPOTIFY_ALBUM_IMG_URL = "https://te.legra.ph/file/b35fd1dfca73b950b1b05.jpg"
 SPOTIFY_PLAYLIST_IMG_URL = "https://te.legra.ph/file/95b3ca7993bbfaf993dcb.jpg"
 
-
+DAV = ANK
 def time_to_seconds(time):
     stringt = str(time)
     return sum(int(x) * 60**i for i, x in enumerate(reversed(stringt.split(":"))))
