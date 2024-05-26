@@ -50,7 +50,7 @@ async def init():
         pass
     await Mody.decorators()
     LOGGER("ZeMusic").info(
-        "جاري تشغيل البوت\nتم التنصيب على سورس الملك بنجاح\nقناة السورس https://t.me/EF_19"
+        "جاري تشغيل البوت\nتم التنصيب على سورس ادمان بنجاح\nقناة السورس https://t.me/TI_M_ll"
     )
     await idle()
     await app.stop()
