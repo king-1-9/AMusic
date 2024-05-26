@@ -7,7 +7,7 @@ import config
 
 lnk = "https://t.me/" + config.CHANNEL_LINK
 
-@app.on_message(filters.command(["مطور", "المطور"],""))
+@app.on_message(filters.regex(r"^(المطور|مطور)$"))
 async def devid(client: Client, message: Message):
     try:
         usr = await client.get_users(OWNER_ID)
