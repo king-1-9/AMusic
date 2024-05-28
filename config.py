@@ -7,12 +7,12 @@ from pyrogram import filters
 load_dotenv()
  
 # Get this value from my.telegram.org/apps
-API_ID = int(getenv("API_ID","20036317"))
-API_HASH = getenv("API_HASH","986cb4ba434870a62fe96da3b5f6d411")
+API_ID = int(getenv("API_ID","21209802"))
+API_HASH = getenv("API_HASH","eed1c8387c6ee80009527e07d9d58cc0")
 
 # Get your token from @BotFather on Telegram.
-BOT_TOKEN = getenv("BOT_TOKEN")
-BOT_NAME = getenv("BOT_NAME","")
+BOT_TOKEN = getenv("BOT_TOKEN",'BAGi8fAAKGCjmyWNegWXAYkjnTK1H_5AaKu1tJ0HTbV0IQ0L-kPuI3eaSlSaa58KXtKlq8rOX3qJfi7aeqWmFc4MpzQ3r5qqOME6-aSQFVQjEFOR05mzLcZJshK-1LP6CEWSazEKZ2DWElCLZt6Dlac2SGhrBQOoBJuDv8MCQPzYPGZfli4X60UAlz5ZE8udq9S7Jtm3Z4le3Ii8d3UPn0BFMsKR8Q2z4TD5sp3kSmN6Agmug8P3rMZCNC_BlehbLC6DSsMrfcccNtKZlJwraxN0XPGB9M6ozwQZr2q7UJAneTcbmLQqky4Yfu54OIY79D2R0I9JmrSc7EYJ7Lp7otu3kV4TLQAAAAGTTu4lAA')
+BOT_NAME = getenv("BOT_NAME","7158630532:AAHr1w8TvQTlU_etEyiykoJqVPEHWO_vPcQ")
 
 # Get your mongo url from cloud.mongodb.com
 MONGO_DB_URI = getenv("MONGO_DB_URI","mongodb+srv://abood:king@cluster0.rbp1cqz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0")
@@ -23,7 +23,7 @@ DURATION_LIMIT_MIN = int(getenv("DURATION_LIMIT", 480))
 LOGGER_ID = int(getenv("LOGGER_ID"))
 
 # Get this value from @FallenxBot on Telegram by /id
-OWNER_ID = int(getenv("OWNER_ID", 5145609515))
+OWNER_ID = int(getenv("OWNER_ID", 6716174264))
 
 ## Fill these variables if you re deploying on heroku.
 # Your heroku app name
@@ -41,9 +41,9 @@ GIT_TOKEN = getenv(
     "GIT_TOKEN", None
 )  # Fill this variable if your upstream repository is private
 
-CHANNEL_NAME = getenv("CHANNEL_NAME", "𝚂𝚄𝙾𝚁𝙲𝙴 𝙺𝙸𝙽𝙶")
-CHANNEL_LINK = getenv("CHANNEL_LINK", "EF_19")
-SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/GY_19")
+CHANNEL_NAME = getenv("CHANNEL_NAME", "𝐂𝐎𝑳𝐎𝐍𝐄𝑳𓏺²² ")
+CHANNEL_LINK = getenv("CHANNEL_LINK", "A_LAA22")
+SUPPORT_CHAT = getenv("SUPPORT_CHAT", "https://t.me/A_LAA26")
 
 # Set this to True if you want the assistant to automatically leave chats after an interval
 AUTO_LEAVING_ASSISTANT = bool(getenv("AUTO_LEAVING_ASSISTANT", False))
