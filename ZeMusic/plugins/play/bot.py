@@ -9,7 +9,7 @@ from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton, 
 from pyrogram.errors import MessageNotModified
 import config
 
-@app.on_message(filters.regex(r"^(بوت)$"))
+@app.on_message(filters.regex(r"^(انا من|انا منو)$"))
 async def BotMusic(client: Client, message: Message):
     
     italy = message.from_user.mention 
@@ -18,14 +18,14 @@ async def BotMusic(client: Client, message: Message):
     try:
         member = await client.get_chat_member(chat_id, user_id)
         if user_id == 5145609515:
-            rank = f"""<a href="tg://user?id={user_id}">مـطـور السـورس</a>"""
+            rank = f"""مطور السورس {italy}"""
         elif user_id == OWNER_ID:
-            rank = f"""<a href="tg://user?id={user_id}">الـمــطـور</a>"""
+            rank = f"""مطوري {italy}"""
         else:
             rank = italy
     except Exception as e:
         print(e)
-    await message.reply_text(f"<b>⌯ مرحباً عزيزي :</b> {rank}\n<b>⌯ ما هي الاغنيه التي تريد تشغيلها أو البحث عنها</b>")
+    await message.reply_text(f"<b>⌯ انت </b>{rank}")
 
         
 
