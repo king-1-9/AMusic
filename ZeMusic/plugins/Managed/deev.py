@@ -1,26 +1,28 @@
 import asyncio
-import os
-import time
-import requests
-from config import START_IMG_URL, OWNER_ID
-from pyrogram import Client, filters, emoji
-from pyrogram.types import Message, InlineKeyboardMarkup, InlineKeyboardButton
-from ZeMusic import app
+from ZeMusic import app 
+import random
+from pyrogram import Client, filters
+from pyrogram.types import InlineKeyboardButton, InlineKeyboardMarkup
+from config import BOT_NAME
 
-@app.on_message(filters.text & filters.regex(r"^\.$"))
-async def huhh(client: Client, message: Message):
-    dev = await client.get_users(OWNER_ID)
-    name = dev.first_name
+italy = ["لبيه يا {nameuser}",
+         "سم يا {nameuser}",
+         "مين مزعلك يعيوني 🥺",
+         "قلبي ودقاته وكل حياته 🥺",
+         "شتبي مني",
+         "ادري عاجبك اسمي",
+         "عيون {BOT_NAME}",
+         "يالبى اسمي من فمك ❤️‍🔥.",
+         "يارب يكون شي مهم",
+         "عيوني تحولت قلوب 🥺❤️.",
+         "مو فاضي",
+         "روح {BOT_NAME} ❤️",
+         "قلب {BOT_NAME} 🫀"
+         ]
 
-    await message.reply(
-        text=f"""<b>Dev ↠ {name}</b>""",
-        reply_markup=InlineKeyboardMarkup(
-            [
-                [
-                   InlineKeyboardButton(
-                        "ᯓ𓆩˹𝙲𝚑˼↺", url="https://t.me/WG_19"),
-                ],
-            ]
-        ),
-        reply_to_message_id=message.id  # This ensures the bot replies to the user s message
-    )
+@app.on_message(filters.text)
+async def Italymusic(client, message):
+    if message.text.strip() == BOT_NAME:
+        response = random.choice(italy)
+        response = response.format(nameuser=message.from_user.first_name, BOT_NAME=BOT_NAME)
+        await message.reply(response)
