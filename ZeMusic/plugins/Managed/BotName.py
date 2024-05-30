@@ -1,3 +1,4 @@
+"""
 import asyncio
 from ZeMusic import app 
 import random
@@ -26,3 +27,4 @@ async def Italymusic(client, message):
         response = random.choice(italy)
         response = response.format(nameuser=message.from_user.first_name, BOT_NAME=BOT_NAME)
         await message.reply(response)
+        """
