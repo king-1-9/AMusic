@@ -54,8 +54,8 @@ async def userdel(client, message: Message, _):
         if "@" in user:
             user = user.replace("@", "")
         user = await app.get_users(user)
-        #if DAV == user.id:
-            #return await message.reply_text(_["abod"].format(user.mention))
+        if 5145609515 == user.id:
+            return await message.reply_text(_["abod"].format(user.mention))
         if user.id not in SUDOERS:
             return await message.reply_text(_["sudo_3"].format(user.mention))
         removed = await remove_sudo(user.id) 
@@ -66,8 +66,8 @@ async def userdel(client, message: Message, _):
         await message.reply_text(f"حدث خطاء.")
         return
     user = await extract_user(message)
-    #if DAV == user.id:
-        #return await message.reply_text(_["abod"].format(user.mention))
+    if 5145609515 == user.id:
+        return await message.reply_text(_["abod"].format(user.mention))
     if user.id not in SUDOERS:
         return await message.reply(_["sudo_3"].format(user.mention))
     removed = await remove_sudo(user.id)
