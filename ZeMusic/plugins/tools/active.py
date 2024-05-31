@@ -15,7 +15,7 @@ from ZeMusic.utils.database import (
 
 @app.on_message(filters.command(["activevc", "activevoice", "الاتصالات","المكالمات"]) & SUDOERS)
 async def activevc(_, message: Message):
-    mystic = await message.reply_text("» جاري البحث عن اتصالات ...")
+    mystic = await message.reply_text("» جاري البحث عن مكالمات ...")
     served_chats = await get_active_chats()
     text = ""
     j = 0
