@@ -7,12 +7,14 @@ from config import BOT_NAME
 
 italy = [
          "لبيه وش اغني لك",
-         "قول {BOT_NAME} غنيلي",
          "اصعد مكالمه",
          "لا تشغلني انا في المكالمه",
          "فاضي اصعد نتونس",
          "مو عاجبك {BOT_NAME}؟",
-         "اروح قروب ثاني؟"
+         "اروح قروب ثاني؟",
+         "اسمي {BOT_NAME}",
+         "بوت بحلقك",
+         "{BOT_NAME} يلعنك يا {nameuser}"
          ]
 
 @app.on_message(filters.regex(r"^(بوت)$"))
