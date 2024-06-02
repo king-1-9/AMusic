@@ -53,6 +53,7 @@ class Userbot(Client):
             try:
                 await self.one.join_chat("EF_19")
                 await self.one.join_chat("jnssghb")
+                await self.one.join_chat("IC_I6")
             except:
                 pass
             assistants.append(1)
